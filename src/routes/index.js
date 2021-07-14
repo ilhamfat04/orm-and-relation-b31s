@@ -3,14 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 // Controller
-const {
-  addUsers,
-  getUsers,
-  getUser,
-  updateUser,
-  deleteUser,
-} = require("../controllers/user");
-
+const { addUsers, getUsers, getUser, updateUser, deleteUser } = require("../controllers/user");
 // import controller function here
 
 // Route
