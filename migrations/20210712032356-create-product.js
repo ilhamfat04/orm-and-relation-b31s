@@ -17,6 +17,9 @@ module.exports = {
       price: {
         type: Sequelize.INTEGER
       },
+      image: {
+        type: Sequelize.STRING
+      },
       qty: {
         type: Sequelize.INTEGER
       },

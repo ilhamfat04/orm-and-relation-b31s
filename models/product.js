@@ -16,12 +16,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       });
 
-      product.hasMany(models.transaction, {
-        as: "transactions",
-        foreignKey: {
-          name: "idProduct",
-        },
-      });
+      // code here
     }
   }
   product.init(
@@ -29,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
       name: DataTypes.STRING,
       desc: DataTypes.TEXT,
       price: DataTypes.INTEGER,
+      image: DataTypes.STRING,
       qty: DataTypes.INTEGER,
       idUser: DataTypes.INTEGER,
     },
