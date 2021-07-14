@@ -26,13 +26,13 @@ module.exports = (sequelize, DataTypes) => {
 
       //hasMany association to transaction model
       user.hasMany(models.transaction, {
-        as: "transactions",
+        as: "buyerTransactions",
         foreignKey: {
           name: "idBuyer",
         },
       });
       user.hasMany(models.transaction, {
-        as: "transactions",
+        as: "sellerTransactions",
         foreignKey: {
           name: "idSeller",
         },
