@@ -14,7 +14,7 @@ module.exports = {
       gender: {
         type: Sequelize.STRING,
       },
-      hobby: {
+      address: {
         type: Sequelize.STRING,
       },
       idUser: {
