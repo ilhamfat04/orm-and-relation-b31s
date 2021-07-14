@@ -3,10 +3,10 @@ const express = require('express')
 const router = express.Router()
 
 // Controller
-const { addUsers } = require('../controllers/user')
+// import controller here
 
 // Route
-router.post('/user', addUsers)
+// add route here
 
 
 module.exports = router
