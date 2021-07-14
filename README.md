@@ -1,4 +1,4 @@
-# Insert data with ORM Sequelize
+# Select data with ORM Sequelize
 
 To perform select record data from specific table with ORM Sequelize, we can use method `findAll()`  
 and `findOne()` from our model.  
