@@ -23,4 +23,4 @@ idUser: {
 ```  
 The above example is property from profile model to be foreign key because it has relation with user model.
 
-And then in the rest of the other migration files, you can edit them according to our database design. 
+And then on the rest migration files, you can edit them according to our database design. 
