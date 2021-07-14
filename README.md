@@ -1,4 +1,4 @@
-# Sequelize belongsToMany
+# Sequelize BelongsToMany
 
 `belongsToMany()` is the special method for define many-to-many association. This method means that many data in model (the source) has relation to many data in another model (the target).  
 
