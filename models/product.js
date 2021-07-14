@@ -23,15 +23,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       });
 
-      // belongs to many category
-      product.belongsToMany(models.category, {
-        as: "categories",
-        through: {
-          model: "productCategory",
-          as: "bridge",
-        },
-        foreignKey: "idProduct",
-      });
+      // code here
     }
   }
   product.init(
@@ -39,6 +31,7 @@ module.exports = (sequelize, DataTypes) => {
       name: DataTypes.STRING,
       desc: DataTypes.TEXT,
       price: DataTypes.INTEGER,
+      image: DataTypes.STRING,
       qty: DataTypes.INTEGER,
       idUser: DataTypes.INTEGER,
     },
