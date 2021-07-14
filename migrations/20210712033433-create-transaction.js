@@ -10,30 +10,15 @@ module.exports = {
       },
       idProduct: {
         type: Sequelize.INTEGER,
-        references: {
-          model: "products",
-          key: "id",
-        },
-        onUpdate: "CASCADE",
-        onDelete: "CASCADE",
+        // code here
       },
       idBuyer: {
         type: Sequelize.INTEGER,
-        references: {
-          model: "users",
-          key: "id",
-        },
-        onUpdate: "CASCADE",
-        onDelete: "CASCADE",
+        // code here
       },
       idSeller: {
         type: Sequelize.INTEGER,
-        references: {
-          model: "users",
-          key: "id",
-        },
-        onUpdate: "CASCADE",
-        onDelete: "CASCADE",
+        // code here
       },
       price: {
         type: Sequelize.INTEGER
