@@ -1,4 +1,4 @@
-# BelongsTo
+# Sequelize BelongsTo
 
 `belongsTo()` is the special method for define association. This method means that data in model belongs to data in another model.
 
