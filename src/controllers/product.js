@@ -1,4 +1,4 @@
-// import necessary model
+// import necessary model here
 const { product, user } = require("../../models");
 
 exports.getProduct = async (req, res) => {
