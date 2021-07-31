@@ -3,7 +3,7 @@
 Let's prepare our database.
 
 Database design:  
-![alt text](https://github.com/DumbwaysDotId/query-with-orm-and-relation-template/blob/5.prepare-database/database_design.jpg "Database Design")
+![alt text](https://github.com/DumbwaysDotId/query-with-orm-and-relation-template/blob/5.prepare-database/database-design.jpg "Database Design")
 
 Don't worry, all needed models have been generated, your focus is modify property in migration file before run migration.
 
