@@ -1,8 +1,8 @@
 # Sequelize HasOne
 
-`hasOne()` is the special method for define association. This method means that one data in model (the source) has relation to one data in another model (the target).  
+`hasOne()` is the special method for define one-to-one association. This method means that one data in model (the source) has relation to one data in another model (the target).  
 
-For example in our database, one data user has relation to one data in profile in association. Then we can define the association in user model as follows:  
+For example in our database, one data user has relation to one data profile in association. Then we can define the association in user model as follows:  
 
 ```javascript
 static associate(models) {
