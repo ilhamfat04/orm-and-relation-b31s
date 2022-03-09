@@ -25,7 +25,6 @@ exports.getUsers = async (req, res) => {
             where: {
                 status: "customer"
             },
-
             attributes: {
                 exclude: ['password', 'createdAt', 'updatedAt']
             }
