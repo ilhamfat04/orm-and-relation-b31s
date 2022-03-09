@@ -23,7 +23,7 @@ exports.getUsers = async (req, res) => {
 
         const users = await user.findAll({
             attributes: {
-                exclude: ['password','createdAt', 'updatedAt']
+                exclude: ['password', 'createdAt', 'updatedAt']
             }
         })
 
@@ -72,4 +72,28 @@ exports.getUser = async (req, res) => {
 
 exports.updateUser = async (req, res) => {
     // code here
+    try {
+        const { id } = req.params
+        const newData = req.body
+
+        await user.update(newData, {
+            where: {
+                id
+            }
+        })
+
+        res.send({
+            status: 'success',
+            message: `Update user id = ${id} finished`,
+            data: {
+                newData
+            }
+        })
+    } catch (error) {
+        console.log(error)
+        res.send({
+            status: 'failed',
+            message: 'Server Error'
+        })
+    }
 }
