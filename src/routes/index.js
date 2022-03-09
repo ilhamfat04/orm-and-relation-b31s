@@ -3,7 +3,7 @@ const express = require('express')
 const router = express.Router()
 
 // Controller
-const { addUsers, getUsers, getUser, updateUser, deleteUser } = require('../controllers/user')
+const { addUsers, getUsers, getUser, updateUser, deleteUser, getUserProducts } = require('../controllers/user')
 const { getProduct, addProduct } = require('../controllers/product')
 const { getTransactions, addTransaction } = require('../controllers/transaction')
 
@@ -13,6 +13,8 @@ router.get('/users', getUsers)
 router.get('/user/:id', getUser)
 router.patch('/user/:id', updateUser)
 router.delete('/user/:id', deleteUser)
+
+router.get('/user-products', getUserProducts)
 
 router.get('/products', getProduct)
 router.post('/product', addProduct)

@@ -1,4 +1,4 @@
-const { user, profile } = require("../../models");
+const { user, profile, product } = require("../../models");
 
 exports.addUsers = async (req, res) => {
   try {
@@ -128,3 +128,37 @@ exports.deleteUser = async (req, res) => {
     });
   }
 };
+
+
+exports.getUserProducts = async (req, res) => {
+  try {
+
+    const data = await user.findAll({
+      where: {
+        status: 'seller'
+      },
+      include: {
+        model: product,
+        as: "products",
+        attributes: {
+          exclude: ["idUser", "createdAt", "updatedAt"],
+        },
+      },
+      attributes: {
+        exclude: ["password", "createdAt", "updatedAt"],
+      },
+    })
+
+    res.send({
+      status: "success",
+      data
+    })
+
+  } catch (error) {
+    console.log(error);
+    res.send({
+      status: "failed",
+      message: "Server Error",
+    });
+  }
+}
