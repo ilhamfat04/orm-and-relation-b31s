@@ -45,7 +45,6 @@ exports.getUsers = async (req, res) => {
 exports.getUser = async (req, res) => {
     try {
         const { id } = req.params;
-
         const data = await user.findOne({
             where: {
                 id,
