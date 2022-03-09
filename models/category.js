@@ -9,6 +9,14 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // code here
+      category.belongsToMany(models.product, {
+        as: "products",
+        through: {
+          model: "productCategory",
+          as: "bridge"
+        },
+        foreignKey: "idCategory"
+      })
     }
   }
   category.init(
